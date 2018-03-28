@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionModel>
+    <Runtime>
+    </Runtime>
+
+    <Extension path="/MonoDevelop/Ide/Commands/Edit">
+        <Command id="Xavalon.XamlStyler.Mac.FormatXaml" _label="Format XAML" _description="Reformats the XAML document to be much more readable" defaultHandler="Xavalon.XamlStyler.Mac.FormatXamlHandler" shortcut="Ctrl|Shift|I" />
+    </Extension>
+    <Extension path="/MonoDevelop/SourceEditor2/ContextMenu/Editor">
+        <CommandItem id="Xavalon.XamlStyler.Mac.FormatXaml" />
+    </Extension>
+    <Extension path="/MonoDevelop/Ide/GlobalOptionsDialog/Other">
+        <Section
+            id="XamlStylerOptions"
+            _label="XAML Styler Options"
+            fill="true"
+            class="Xavalon.XamlStyler.Mac.Gui.XamlStylerOptionsPanel" />
+    </Extension>
+</ExtensionModel>

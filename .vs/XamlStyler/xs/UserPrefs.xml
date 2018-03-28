@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{4B16AFDA-B3DE-419F-8113-C148AC10D277}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamlStyler.Mac/FormatXamlHandler.cs">
+    <Files>
+      <File FileName="XamlStyler.Mac/StylerOptionsConfiguration.cs" Line="53" Column="7" />
+      <File FileName="XamlStyler.Mac/Gui/OptionsViewModel.cs" Line="39" Column="40" />
+      <File FileName="XamlStyler.Mac/Gui/Option.cs" Line="4" Column="33" />
+      <File FileName="XamlStyler.Mac/FormatXamlHandler.cs" Line="30" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="XamlStyler" expanded="True">
+            <Node name="XamlStyler.Core" expanded="True" />
+            <Node name="XamlStyler.Mac" expanded="True">
+              <Node name="FormatXamlHandler.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.XamlStyler.Console PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.XamlStyler.Mac PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
