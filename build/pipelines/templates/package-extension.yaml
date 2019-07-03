@@ -14,12 +14,6 @@ jobs:
     displayName: 'Download all extension artifacts'
     artifact: XamlStylerExtension
 
-  - task: NugetCommand@2
-    displayName: 'Package XamlStyler.Console for NuGet'
-    inputs:
-      command: pack
-      packagesToPack: '**\*.nuspec'
-
   - publish: $(Build.ArtifactStagingDirectory)
     displayName: 'Publish PackagedXamlStylerExtension artifact'
     artifact: PackagedXamlStylerExtension
