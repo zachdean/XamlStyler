@@ -3,6 +3,9 @@
 # This pipeline builds and validate the extension in all supported configurations.
 #
 
+pr:
+- master
+
 name: 3.$(Date:yyMM).$(DayOfMonth)$(Rev:rr).0
 
 jobs:
