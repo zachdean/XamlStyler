@@ -33,6 +33,12 @@ jobs:
       clean: true
       maximumCpuCount: true
 
+  - task: NuGetCommand@2
+    displayName: 'Package XamlStyler.Console NuGet'
+    inputs:
+      command: pack
+      packagesToPack: 'XamlStyler.Console/*.csproj'
+
   - publish: $(System.DefaultWorkingDirectory)/bin/Release
     displayName: 'Publish XamlStylerExtension artifact'
     artifact: XamlStylerExtension
