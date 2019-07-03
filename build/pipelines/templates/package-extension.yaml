@@ -10,12 +10,10 @@ jobs:
   - checkout: self
     clean: true
 
-  - task: DownloadBuildArtifacts@0
+  - download: current
     displayName: 'Download all extension artifacts'
-    inputs:
-      artifactName: XamlStylerExtension
+    artifact: XamlStylerExtension
 
-  - task: PublishBuildArtifacts@1
+  - publish: $(Pipeline.Workspace)/XamlStylerExtension
     displayName: 'Publish PackagedXamlStylerExtension artifact'
-    inputs:
-      artifactName: PackagedXamlStylerExtension
+    artifact: PackagedXamlStylerExtension
