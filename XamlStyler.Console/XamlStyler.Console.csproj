@@ -81,6 +81,9 @@
       <SubType>
       </SubType>
     </None>
+    <None Include="XamlStyler.Console.nuspec">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
