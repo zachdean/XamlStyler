@@ -39,6 +39,7 @@ jobs:
       command: pack
       configuration: Release
       packagesToPack: 'XamlStyler.Console/*.csproj'
+      packDestination: $(System.DefaultWorkingDirectory)/bin/Release/NuGetPackage
 
   - publish: $(System.DefaultWorkingDirectory)/bin/Release
     displayName: 'Publish XamlStylerExtension artifact'
