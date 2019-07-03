@@ -12,9 +12,9 @@
 		<projectUrl>https://github.com/Xavalon/XamlStyler</projectUrl>
 		<licenseUrl>https://github.com/Xavalon/XamlStyler/blob/master/LICENSE.txt</licenseUrl>
 		<iconUrl>http://i.imgur.com/WEXCraF.png</iconUrl>
-		<copyright>Copyright © Xavalon 2016</copyright>
+		<copyright>Copyright © Xavalon 2019</copyright>
 	</metadata>
 	<files>
-		<file src="XamlStyler.Console\bin\Release\**" target="tools" />
+		<file src="bin\Release\Console\**" target="tools" />
 	</files>
 </package>
