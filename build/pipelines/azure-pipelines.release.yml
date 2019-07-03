@@ -10,3 +10,4 @@ name: 3.$(Date:yyMM).$(DayOfMonth)$(Rev:rr).0
 
 jobs:
 - template: ./templates/build-extension-public.yaml
+- template: ./templates/package-extension.yaml
