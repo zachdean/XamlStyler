@@ -1,0 +1,23 @@
+jobs:
+- job: Package
+  dependsOn:
+    - BuildAnyCPU
+  pool:
+    vmImage: vs2017-win2016
+  workspace:
+    clean: outputs
+  variables:
+    skipComponentGovernanceDetection: true
+  steps:
+  - checkout: self
+    clean: true
+
+  - task: DownloadBuildArtifacts@0
+    displayName: 'Download all extension artifacts'
+    inputs:
+      artifactName: XamlStylerExtension
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish PackagedXamlStylerExtension artifact'
+    inputs:
+      artifactName: PackagedXamlStylerExtension
