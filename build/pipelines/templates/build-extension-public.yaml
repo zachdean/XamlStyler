@@ -33,11 +33,9 @@ jobs:
       clean: true
       maximumCpuCount: true
 
-  - task: PublishPipelineArtifact@1
+  - publish: $(System.DefaultWorkingDirectory)/bin/Release
     displayName: 'Publish XamlStylerExtension artifact'
-    inputs:
-      artifact: XamlStylerExtension
-      path: $(System.DefaultWorkingDirectory)/bin/Release
+    artifact: XamlStylerExtension
 
   - task: VSTest@2
     displayName: 'Run unit tests'
