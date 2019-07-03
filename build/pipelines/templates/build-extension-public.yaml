@@ -34,9 +34,10 @@ jobs:
       maximumCpuCount: true
 
   - task: NuGetCommand@2
-    displayName: 'Package XamlStyler.Console NuGet'
+    displayName: 'Package XamlStyler.Console for NuGet'
     inputs:
       command: pack
+      configuration: Release
       packagesToPack: 'XamlStyler.Console/*.csproj'
 
   - publish: $(System.DefaultWorkingDirectory)/bin/Release
