@@ -5,15 +5,18 @@ jobs:
 - job: BuildAnyCPU
   displayName: 'Build AnyCPU'
   pool:
-    vmImage: 'windows-latest'
+    vmImage: vs2017-win2016
   workspace:
     clean: outputs
   steps:
   - checkout: self
     clean: true
   
-  - task: NuGetToolInstaller@1
-    displayName: 'Use NuGet 5.2.0'
+  - task: NuGetToolInstaller@0
+    displayName: 'Use NuGet 4.7.1'
+    inputs:
+      versionSpec: 4.7.1
+      checkLatest: true
 
   - task: NuGetCommand@2
     displayName: 'NuGet restore XamlStyler.sln'
@@ -25,7 +28,7 @@ jobs:
     displayName: 'Build solution XamlStyler.sln'
     inputs:
       solution: XamlStyler.sln
-      vsVersion: 16.0
+      vsVersion: 15.0
       platform: 'Any CPU'
       configuration: Release
       clean: true
