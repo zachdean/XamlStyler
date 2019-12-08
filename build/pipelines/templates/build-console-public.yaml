@@ -30,10 +30,9 @@ jobs:
       minorVersion: '3'
       patchVersion: '0'
 
-  - bash: echo $(Build.ArtifactStagingDirectory)
-  - bash: ls XamlStyler.Console
-  - task: PublishPipelineArtifact@1
-    displayName: 'Publish XamlStyler.Console artifact'
-    inputs:
-      artifact: XamlStyler.Console
-      path: 'XamlStyler.Console/*.nupkg'
+  - bash: ls XamlStyler.Console/bin/Release
+  # - task: PublishPipelineArtifact@1
+  #   displayName: 'Publish XamlStyler.Console artifact'
+  #   inputs:
+  #     artifact: XamlStyler.Console
+  #     path: 'XamlStyler.Console/bin/**/*.nupkg'
