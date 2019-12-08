@@ -9,6 +9,12 @@ trigger:
 pr:
 - master
 
+variables:
+  buildConfiguration: 'Release'
+  major: 3
+  minor: 3
+  patch: 0
+
 name: 0.$(Date:yyMM).$(DayOfMonth)$(Rev:rr).0
 
 jobs:

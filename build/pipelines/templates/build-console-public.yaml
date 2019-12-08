@@ -1,7 +1,4 @@
 # build xamlStyler.Console nuget package
-variables:
-  buildConfiguration: 'Release'
-
 jobs:
 - job: BuildConsoleNuget
   displayName: 'Build XamlStyler.Console Nuget Package'
@@ -26,9 +23,9 @@ jobs:
       packagesToPack: '**/XamlStyler.Console.csproj'
       versioningScheme: 'byPrereleaseNumber'
       nobuild: true
-      majorVersion: '3'
-      minorVersion: '3'
-      patchVersion: '0'
+      majorVersion: '$(major)'
+      minorVersion: '$(minor)'
+      patchVersion: '$(patch)'
 
   - bash: ls $(Build.ArtifactStagingDirectory)
 
