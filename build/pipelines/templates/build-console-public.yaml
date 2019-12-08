@@ -32,8 +32,15 @@ jobs:
 
   - bash: ls $(Build.ArtifactStagingDirectory)
 
-  - task: PublishPipelineArtifact@1
+  # - task: PublishPipelineArtifact@1
+  #   displayName: 'Publish XamlStyler.Console artifact'
+  #   inputs:
+  #     artifact: XamlStyler.Console
+  #     path: '$(Build.ArtifactStagingDirectory)\*.nupkg'
+
+  - task: PublishBuildArtifacts@1
     displayName: 'Publish XamlStyler.Console artifact'
     inputs:
-      artifact: XamlStyler.Console
-      path: '$(Build.ArtifactStagingDirectory)\*.nupkg'
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'drop'
+      publishLocation: 'Container'
