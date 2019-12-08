@@ -30,7 +30,9 @@ jobs:
       minorVersion: '3'
       patchVersion: '0'
 
-  - bash: ls XamlStyler.Console/bin/Release/netcoreapp2.2
+  - bash: ls XamlStyler.Console/bin/Release/netcoreapp2.2/publish
+  - bash: ls $(Build.ArtifactStagingDirectory)
+
   # - task: PublishPipelineArtifact@1
   #   displayName: 'Publish XamlStyler.Console artifact'
   #   inputs:
