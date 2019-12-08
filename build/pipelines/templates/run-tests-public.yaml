@@ -3,7 +3,7 @@ jobs:
 - job: RunUnitTests
   displayName: 'Run Tests'
   pool:
-    vmImage: 'ubuntu-latest'
+    vmImage: 'windows-latest'
 
   steps:
   # The first task is the dotnet command build, pointing to our csproj file
@@ -15,8 +15,8 @@ jobs:
       arguments: '--configuration $(buildConfiguration)'
 
   - task: DotNetCoreCLI@2
+    displayName: 'Run unit tests'
     inputs:
-      displayName: 'Run unit tests'
       command: test
       projects: '**/*UnitTests/*.csproj'
       arguments: '--configuration $(buildConfiguration)'
