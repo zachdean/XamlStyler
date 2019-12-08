@@ -31,9 +31,9 @@ jobs:
       patchVersion: '0'
 
   - bash: echo $(Build.ArtifactStagingDirectory)
-  - bash: ls
+  - bash: ls XamlStyler.Console
   - task: PublishPipelineArtifact@1
     displayName: 'Publish XamlStyler.Console artifact'
     inputs:
       artifact: XamlStyler.Console
-      path: '$(Build.ArtifactStagingDirectory)/*.nupkg'
+      path: 'XamlStyler.Console/*.nupkg'
