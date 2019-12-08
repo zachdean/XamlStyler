@@ -1,6 +1,6 @@
 # build xamlStyler.Console nuget package
 jobs:
-- job: BuildConsoleNuget
+- job: RunUnitTests
   displayName: 'Run Tests'
   pool:
     vmImage: 'ubuntu-latest'
